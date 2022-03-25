@@ -12,7 +12,7 @@ const postTweet = async (message) => {
 
   try {
     await client.post("statuses/update", {
-      status: `${message} https://www.youtube.com/c/caleyCode`,
+      status: `${message}`,
     });
     // eslint-disable-next-line no-console
     console.log("Successful tweet");
