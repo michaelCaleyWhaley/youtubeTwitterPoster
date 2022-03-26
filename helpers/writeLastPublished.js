@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import fs from "fs";
 import path from "path";
 
@@ -8,8 +7,10 @@ const __dirname = path.resolve();
 const writeLastPublished = (lastPublished) => {
   fs.writeFile(`${__dirname}/store/post.txt`, lastPublished, (err) => {
     if (err) {
+      // eslint-disable-next-line no-console
       console.error(err);
     }
+    // eslint-disable-next-line no-console
     console.log(`Last published written`);
   });
 };
