@@ -7,6 +7,7 @@ const __dirname = path.resolve();
 const readLastPublished = async () =>
   fs.readFileSync(`${__dirname}/store/post.txt`, "utf8", (err, data) => {
     if (err) {
+      // eslint-disable-next-line no-console
       console.error(err);
     }
     return data;

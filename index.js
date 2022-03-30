@@ -22,7 +22,7 @@ async function twitterYoutubePoster() {
     postTweet(`${title} https://youtu.be/${videoId}`);
   } catch (e) {
     // eslint-disable-next-line no-console
-    console.log(e);
+    console.log("e: ", e);
   }
 }
 twitterYoutubePoster();
