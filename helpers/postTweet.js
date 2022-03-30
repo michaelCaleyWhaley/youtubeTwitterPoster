@@ -10,16 +10,11 @@ const postTweet = async (message) => {
 
   const client = new Twitter(trConfig);
 
-  try {
-    await client.post("statuses/update", {
-      status: `${message}`,
-    });
-    // eslint-disable-next-line no-console
-    console.log("Successful tweet");
-  } catch (e) {
-    // eslint-disable-next-line no-console
-    console.log(`e: `, e);
-  }
+  await client.post("statuses/update", {
+    status: `${message}`,
+  });
+  // eslint-disable-next-line no-console
+  console.log("Successful tweet");
 };
 
 export default postTweet;
