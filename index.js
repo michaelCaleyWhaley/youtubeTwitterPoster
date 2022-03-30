@@ -17,6 +17,7 @@ async function twitterYoutubePoster() {
     const lastPublished = await readLastPublished();
     const hasAlreadyPosted = ytPublishedAt === lastPublished;
     if (hasAlreadyPosted) {
+      // eslint-disable-next-line no-console
       console.log(`LOG: hasAlreadyPosted`);
       return;
     }
